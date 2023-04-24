@@ -1,0 +1,40 @@
+############################################################################################################
+#
+#  General Setting
+#
+############################################################################################################
+- general: MTK_PLATFORM_CFG
+  info: 
+    - config_version: V2.1.0
+      platform: MT8195
+      project: 8395m1_64_bsp
+
+############################################################################################################
+#
+#  UFS Layout Setting
+#
+############################################################################################################
+- storage_type: UFS
+  description: 
+  - general: MTK_STORAGE_CFG
+    info: 
+      - storage: EMMC
+        boot_channel: UFSHCI_0
+        block_size: 0x20000
+
+  - partition_index: SYS0
+    partition_name: bootloader
+    file_name: preloader_8395m1_64_bsp.bin
+    is_download: true
+    type: SV5_BL_BIN
+    linear_start_addr: 0x0
+    physical_start_addr: 0x0
+    partition_size: 0x80000
+    region: UFS_LU0_LU1
+    storage: HW_STORAGE_UFS
+    boundary_check: true
+    is_reserved: false
+    operation_type: BOOTLOADERS
+    is_upgradable: true
+    empty_boot_needed: false
+    reserve: 0x00

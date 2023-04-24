@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flashtool-config version="2.0">
+    <general>
+        <chip-name>MT8395</chip-name>
+        <storage-type>UFS</storage-type>
+        <download-agent>my_path/MTK_AllInOne_DA.bin</download-agent>
+        <scatter>my_path/MT8395_UFS_scatter.txt</scatter>
+        <authentication></authentication>
+        <certification></certification>
+        <rom-list>
+        </rom-list>
+        <connection type="BromUSB" high-speed="true" power="AutoDetect" da_log_level="Info" da_log_channel="UART" timeout-count="3600000" com-port="" storage_life_cycle_check="false" />
+        <checksum-level>none</checksum-level>
+        <!--log_on: log switch, enable log if true, otherwise false;
+			log_path: the directory in which the log files has been stored;
+			clean_hours: the time setting to delete log files regularly, the unit is hours.-->
+        <log-info log_on="true" log_path="C:\ProgramData\SP_FT_Logs" clean_hours="744" />
+    </general>
+    <commands>
+        <combo-format>
+            <format validation="false" physical="false" erase-flag="NormalErase" auto-format="true" auto-format-flag="FormatAll" />
+        </combo-format>
+    </commands>
+</flashtool-config>
